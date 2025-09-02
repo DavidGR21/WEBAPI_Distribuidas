@@ -5,15 +5,6 @@ namespace WEBAPI_Distribuidas.Services
 {
     public class ProductoService
     {
-        public IEnumerable<Producto> GetAll()
-        {
-            return Lista_Productos._productos;
-        }
-
-        public Producto? GetById(int id)
-        {
-            return Lista_Productos._productos.FirstOrDefault(p => p.Id == id);
-        }
 
         public Producto Add(Producto producto)
         {
