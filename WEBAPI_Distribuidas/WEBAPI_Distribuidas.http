@@ -1,0 +1,6 @@
+@WEBAPI_Distribuidas_HostAddress = http://localhost:5190
+
+GET {{WEBAPI_Distribuidas_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
