@@ -28,5 +28,10 @@ namespace WEBAPI_Distribuidas.Services
         {
             return Lista_Productos._productos;
         }
+
+        public Producto? GetById(int id)
+        {
+            return Lista_Productos._productos.FirstOrDefault(p => p.Id == id);
+        }
     }
 }
