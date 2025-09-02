@@ -23,5 +23,10 @@ namespace WEBAPI_Distribuidas.Services
             existente.Disponible = producto.Disponible;
             return true;
         }
+
+        public IEnumerable<Producto> GetAll()
+        {
+            return Lista_Productos._productos;
+        }
     }
 }

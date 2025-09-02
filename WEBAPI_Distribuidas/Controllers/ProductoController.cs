@@ -10,8 +10,13 @@ namespace WEBAPI_Distribuidas.Controllers
     {
         private readonly ProductoService _service = new ProductoService();
 
-        //corregir errores
+        [HttpGet]
+        public ActionResult<IEnumerable<Producto>> Get()
+        {
+            return Ok(_service.GetAll());
+        }
 
+        //corregir errores
         [HttpPost]
         public ActionResult<Producto> Post([FromBody] Producto producto)
         {
