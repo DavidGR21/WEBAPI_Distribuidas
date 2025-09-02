@@ -23,5 +23,15 @@ namespace WEBAPI_Distribuidas.Services
             existente.Disponible = producto.Disponible;
             return true;
         }
+
+        public IEnumerable<Producto> GetAll()
+        {
+            return Lista_Productos._productos;
+        }
+
+        public Producto? GetById(int id)
+        {
+            return Lista_Productos._productos.FirstOrDefault(p => p.Id == id);
+        }
     }
 }
