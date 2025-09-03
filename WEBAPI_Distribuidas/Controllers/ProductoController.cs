@@ -45,5 +45,14 @@ namespace WEBAPI_Distribuidas.Controllers
 
             return NoContent();
         }
+
+        [HttpDelete("{id}")]
+        public ActionResult Delete(int id)
+        {
+            if (!_service.Delete(id))
+                return NotFound();
+
+            return NoContent();
+        }
     }
 }

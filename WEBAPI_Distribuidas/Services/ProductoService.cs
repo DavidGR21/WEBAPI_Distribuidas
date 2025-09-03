@@ -31,7 +31,16 @@ namespace WEBAPI_Distribuidas.Services
 
         public Producto? GetById(int id)
         {
-            return Lista_Productos._productos.FirstOrDefault(p => p.Id == id);
-        }
+            return Lista_Productos._productos.FirstOrDefault(p => p.Id == id);
+        }
+
+        public bool Delete(int id)
+        {
+            var producto = Lista_Productos._productos.FirstOrDefault(p => p.Id == id);
+            if (producto == null) return false;
+
+            Lista_Productos._productos.Remove(producto);
+            return true;
+        }
     }
 }
